@@ -1,0 +1,500 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Syarah Kitab Al-Hikam - Kumpulan hikmah dan pembelajaran Islam">
+    <meta name="keywords" content="al-hikam, kitab, islam, hikmah, pembelajaran">
+    <meta name="author" content="Nama Penulis">
+    <title>syarah kitab al hikam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        h1,h2,h3 { margin: 0; padding: 0; }
+        body,html {
+            font-family: Arial, sans, open sans, Arial, Helvetica, sans-serif;
+            font-size: 19px;
+            color: #000;
+            text-align: justify;
+            line-height: 1.6;
+            margin: 0;
+            padding: 15px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2, h3 { 
+            padding: 10px 0;
+            font-size: 23px;
+            text-align: center;
+            border-style: solid;
+            border-bottom: double #666;
+            border-top: double;
+            border-left: 0;
+            border-right: 0;
+            font-family: "sans;georgia;arial";
+            margin: 20px 0;
+        }
+
+        .arabic-text {
+            font-size: 24px;
+            text-align: right;
+            direction: rtl;
+            margin: 20px 0;
+            line-height: 1.8;
+            font-family: "Traditional Arabic", Arial, sans-serif;
+        }
+
+        blockquote {
+            border-left: 4px solid #f78418;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background: #F7F8E0;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding: 20px 0;
+            border-top: 1px solid #ddd;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #000;
+            padding: 10px 20px;
+            background: #f7ca18;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        a, a:link, a:active, a:visited {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        ol {
+            counter-reset: li;
+            list-style: none;
+            font: 19px Arial, Sans, Lato;
+            padding: 0;
+            margin-bottom: 4em;
+            text-shadow: 0 1px 0 rgba(255,255,255,.5);
+        }
+
+        ol ol {
+            margin: 0 0 0 2em;
+        }
+
+        .rectangle-list a {
+            position: relative;
+            display: block;
+            padding: 0.6em 0.8em;
+            margin: 0.5em 0 0.5em 2.5em;
+            background: #F7F8E0;
+            color: #000;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .rectangle-list a:hover {
+            background: #EAEAEA;
+            transform: translateX(5px);
+        }
+
+        .rectangle-list a::before {
+            content: counter(li);
+            counter-increment: li;
+            position: absolute;
+            left: -2.5em;
+            top: 50%;
+            margin-top: -1em;
+            background: #f7ca18;
+            height: 2em;
+            width: 2em;
+            line-height: 2em;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 50%;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+
+        .rectangle-list a::after {
+            position: absolute;
+            content: '';
+            border: 0.5em solid transparent;
+            left: -1em;
+            top: 50%;
+            margin-top: -0.5em;
+        }
+
+        .rectangle-list a:hover::after {
+            left: -0.5em;
+            border-left-color: #f7ca18;
+        }
+
+        .rectangle-list li a {
+            display: block;
+        }
+
+        .rectangle-list a[href$=".html"] {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            body, html {
+                font-size: 16px;
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .arabic-text {
+                font-size: 20px;
+            }
+        }
+
+        .rectangle-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-left: 30%;
+            margin-right: 10%;
+        }
+
+        .rectangle-list li {
+            margin: 0;
+        }
+
+        .rectangle-list a {
+            margin: 0;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .rectangle-list {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                padding: 10px;
+                gap: 10px;
+                margin-left: 15%;
+                margin-right: 5%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .rectangle-list {
+                grid-template-columns: 1fr;
+                margin-left: 40px;
+                margin-right: 15px;
+            }
+        }
+
+        /* Style untuk header */
+        .site-header {
+            text-align: center;
+            padding: 20px 0;
+            background: #800000; /* Maroon tua */
+            margin-bottom: 20px;
+            position: relative; /* Untuk positioning logo */
+            color: #fff; /* Teks putih */
+        }
+
+        .site-header h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 28px;
+            border: none;
+        }
+
+        .site-header p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .header-logo {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 60px;
+            height: 60px;
+            border-radius: 5px;
+        }
+
+        /* Style untuk footer */
+        .site-footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #800000; /* Maroon tua */
+            margin-top: 30px;
+            color: #fff; /* Teks putih */
+        }
+
+        .site-footer p {
+            margin: 5px 0;
+        }
+
+        .site-footer a {
+            color: #fff; /* Link putih */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .site-footer a:hover {
+            text-decoration: underline;
+            color: #FFF5EE; /* Seashell - warna cream muda saat hover */
+        }
+
+        /* Style untuk pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+            padding: 10px;
+        }
+
+        .pagination button {
+            background: #800000;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .pagination button:hover {
+            background: #A52A2A;
+        }
+
+        .pagination button.active {
+            background: #A52A2A;
+        }
+
+        .pagination button:disabled {
+            background: #cccccc;
+            cursor: not-allowed;
+        }
+
+        .rectangle-list li {
+            display: none; /* Sembunyikan semua item awalnya */
+        }
+
+        .rectangle-list li.active {
+            display: block; /* Tampilkan hanya item yang aktif */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header dengan logo -->
+    <header class="site-header">
+        <img src="img/logo.jpg" alt="Logo Rumah Tahfidz" class="header-logo">
+        <h1>Rumah Tahfidz Saijaan</h1>
+        <p>Jl. Saijaan, Kotabaru, Kalimantan Selatan</p>
+    </header>
+    
+    <nav>
+        <ol class="rectangle-list">
+            <li><a href="img/muqodimah.html">Muqadimah</a></li>
+            <li><a href="img/img/1.html">Al-Hikam 1</a></li>
+            <li><a href="img/2.html">Al-Hikam 2</a></li>
+            <li><a href="img/3.html">Al-Hikam 3</a></li>
+            <li><a href="img/4.html">Al-Hikam 4</a></li>
+            <li><a href="img/5.html">Al-Hikam 5</a></li>
+            <li><a href="img/6.html">Al-Hikam 6</a></li>
+            <li><a href="img/7.html">Al-Hikam 7</a></li>
+            <li><a href="img/8.html">Al-Hikam 8</a></li>
+            <li><a href="img/9.html">Al-Hikam 9</a></li>
+            <li><a href="img/10.html">Al-Hikam 10</a></li>
+            <li><a href="img/11.html">Al-Hikam 11</a></li>
+            <li><a href="img/12.html">Al-Hikam 12</a></li>
+            <li><a href="img/13.html">Al-Hikam 13</a></li>
+            <li><a href="img/14.html">Al-Hikam 14</a></li>
+            <li><a href="img/15.html">Al-Hikam 15-24</a></li>
+            <li><a href="img/16.html">Al-Hikam 25</a></li>
+            <li><a href="img/17.html">Al-Hikam 26</a></li>
+            <li><a href="img/18.html">Al-Hikam 27</a></li>
+            <li><a href="img/19.html">Al-Hikam 28</a></li>
+            <li><a href="img/20.html">Al-Hikam 29</a></li>
+            <li><a href="img/21.html">Al-Hikam 30</a></li>
+            <li><a href="img/22.html">Al-Hikam 31</a></li>
+            <li><a href="img/23.html">Al-Hikam 32</a></li>
+            <li><a href="img/24.html">Al-Hikam 33</a></li>
+            <li><a href="img/25.html">Al-Hikam 34-35</a></li>
+            <li><a href="img/26.html">Al-Hikam 36</a></li>
+            <li><a href="img/27.html">Al-Hikam 37-38</a></li>
+            <li><a href="img/28.html">Al-Hikam 39</a></li>
+            <li><a href="img/29.html">Al-Hikam 40</a></li>
+            <li><a href="img/30.html">Al-Hikam 41</a></li>
+            <li><a href="img/31.html">Al-Hikam 42</a></li>
+            <li><a href="img/32.html">Al-Hikam 43-44</a></li>
+            <li><a href="img/33.html">Al-Hikam 45</a></li>
+            <li><a href="img/34.html">Al-Hikam 46</a></li>
+            <li><a href="img/35.html">Al-Hikam 47</a></li>
+            <li><a href="img/36.html">Al-Hikam 48</a></li>
+            <li><a href="img/37.html">Al-Hikam 49</a></li>
+            <li><a href="img/38.html">Al-Hikam 50</a></li>
+            <li><a href="img/39.html">Al-Hikam 51-52</a></li>
+            <li><a href="img/40.html">Al-Hikam 53-54</a></li>
+            <li><a href="img/41.html">Al-Hikam 55</a></li>
+            <li><a href="img/42.html">Al-Hikam 56</a></li>
+            <li><a href="img/43.html">Al-Hikam 57</a></li>
+            <li><a href="img/44.html">Al-Hikam 58</a></li>
+            <li><a href="img/45.html">Al-Hikam 59-60</a></li>
+            <li><a href="img/46.html">Al-Hikam 61</a></li>
+            <li><a href="img/47.html">Al-Hikam 62-64</a></li>
+            <li><a href="img/48.html">Al-Hikam 65-67</a></li>
+            <li><a href="img/49.html">Al-Hikam 68-69</a></li>
+            <li><a href="img/50.html">Al-Hikam 70-72</a></li>
+            <li><a href="img/51.html">Al-Hikam 73-74</a></li>
+            <li><a href="img/52.html">Al-Hikam 75-76</a></li>
+            <li><a href="img/53.html">Al-Hikam 77-79</a></li>
+            <li><a href="img/54.html">Al-Hikam 80</a></li>
+            <li><a href="img/55.html">Al-Hikam 81-82</a></li>
+            <li><a href="img/56.html">Al-Hikam 83</a></li>
+            <li><a href="img/57.html">Al-Hikam 84</a></li>
+            <li><a href="img/58.html">Al-Hikam 85</a></li>
+            <li><a href="img/59.html">Al-Hikam 86</a></li>
+            <li><a href="img/60.html">Al-Hikam 87</a></li>
+            <li><a href="img/61.html">Al-Hikam 88</a></li>
+            <li><a href="img/62.html">Al-Hikam 89</a></li>
+            <li><a href="img/63.html">Al-Hikam 90-92</a></li>
+            <li><a href="img/64.html">Al-Hikam 93-94</a></li>
+            <li><a href="img/65.html">Al-Hikam 95</a></li>
+            <li><a href="img/66.html">Al-Hikam 96</a></li>
+            <li><a href="img/67.html">Al-Hikam 97</a></li>
+            <li><a href="img/68.html">Al-Hikam 98</a></li>
+            <li><a href="img/69.html">Al-Hikam 99-101</a></li>
+            <li><a href="img/70.html">Al-Hikam 102</a></li>
+            <li><a href="img/71.html">Al-Hikam 103-104</a></li>
+            <li><a href="img/72.html">Al-Hikam 105-106</a></li>
+            <li><a href="img/73.html">Al-Hikam 107-108</a></li>
+            <li><a href="img/74.html">Al-Hikam 109</a></li>
+            <li><a href="img/75.html">Al-Hikam 110</a></li>
+            <li><a href="img/76.html">Al-Hikam 111</a></li>
+            <li><a href="img/77.html">Al-Hikam 112-113</a></li>
+            <li><a href="img/78.html">Al-Hikam 114</a></li>
+            <li><a href="img/79.html">Al-Hikam 115-116</a></li>
+            <li><a href="img/80.html">Al-Hikam 117</a></li>
+            <li><a href="img/81.html">Al-Hikam 118</a></li>
+            <li><a href="img/82.html">Al-Hikam 119</a></li>
+            <li><a href="img/83.html">Al-Hikam 120-121</a></li>
+            <li><a href="img/84.html">Al-Hikam 122-123</a></li>
+            <li><a href="img/85.html">Al-Hikam 124</a></li>
+            <li><a href="img/86.html">Al-Hikam 125</a></li>
+            <li><a href="img/87.html">Al-Hikam 126-127</a></li>
+            <li><a href="img/88.html">Al-Hikam 128-131</a></li>
+            <li><a href="img/89.html">Al-Hikam 132-135</a></li>
+            <li><a href="img/90.html">Al-Hikam 136-137</a></li>
+            <li><a href="img/91.html">Al-Hikam 138</a></li>
+            <li><a href="img/92.html">Al-Hikam 139-140</a></li>
+            <li><a href="img/93.html">Al-Hikam 141-143</a></li>
+            <li><a href="img/94.html">Al-Hikam 144-145</a></li>
+            <li><a href="img/95.html">Al-Hikam 146</a></li>
+            <li><a href="img/96.html">Al-Hikam 147</a></li>
+            <li><a href="img/97.html">Al-Hikam 148-149</a></li>
+            <li><a href="img/98.html">Al-Hikam 150</a></li>
+            <li><a href="img/99.html">Al-Hikam 151-152</a></li>
+            <li><a href="img/100.html">Al-Hikam 153-157</a></li>
+            <li><a href="img/101.html">Al-Hikam 158</a></li>
+            <li><a href="img/102.html">Al-Hikam 159</a></li>
+            <li><a href="img/103.html">Al-Hikam 160</a></li>
+            <li><a href="img/104.html">Al-Hikam 161</a></li>
+            <li><a href="img/105.html">Al-Hikam 162-166</a></li>
+            <li><a href="img/106.html">Al-Hikam 167-169</a></li>
+            <li><a href="img/107.html">Al-Hikam 170-172</a></li>
+            <li><a href="img/108.html">Al-Hikam 173</a></li>
+            <li><a href="img/109.html">Al-Hikam 174-176</a></li>
+            <li><a href="img/110.html">Al-Hikam 177-178</a></li>
+            <li><a href="img/111.html">Al-Hikam 179-182</a></li>
+            <li><a href="img/112.html">Al-Hikam 183-184</a></li>
+            <li><a href="img/113.html">Al-Hikam 185-186</a></li>
+            <li><a href="img/114.html">Al-Hikam 187-191</a></li>
+            <li><a href="img/115.html">Al-Hikam 192</a></li>
+            <li><a href="img/116.html">Al-Hikam 193</a></li>
+            <li><a href="img/117.html">Al-Hikam 194-202</a></li>
+            <li><a href="img/118.html">Al-Hikam 203</a></li>
+            <li><a href="img/119.html">Al-Hikam 204</a></li>
+            <li><a href="img/120.html">Al-Hikam 205-206</a></li>
+            <li><a href="img/121.html">Al-Hikam 207-209</a></li>
+            <li><a href="img/122.html">Al-Hikam 210</a></li>
+            <li><a href="img/123.html">Al-Hikam 211-213</a></li>
+            <li><a href="img/124.html">Al-Hikam 214-216</a></li>
+            <li><a href="img/125.html">Al-Hikam 217-219</a></li>
+            <li><a href="img/126.html">Al-Hikam 220-221</a></li>
+            <li><a href="img/127.html">Al-Hikam 222</a></li>
+            <li><a href="img/128.html">Al-Hikam 223-224</a></li>
+            <li><a href="img/129.html">Al-Hikam 225-226</a></li>
+            <li><a href="img/130.html">Al-Hikam 227</a></li>
+            <li><a href="img/131.html">Al-Hikam 228-234</a></li>
+        </ol>
+    </nav>
+
+    <!-- Tambahkan div untuk pagination setelah rectangle-list -->
+    <div class="pagination" id="pagination"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const itemsPerPage = 20;
+            const listItems = document.querySelectorAll('.rectangle-list li');
+            const totalPages = Math.ceil(listItems.length / itemsPerPage);
+            const paginationContainer = document.getElementById('pagination');
+
+            // Fungsi untuk menampilkan items pada halaman tertentu
+            function showPage(pageNumber) {
+                const start = (pageNumber - 1) * itemsPerPage;
+                const end = start + itemsPerPage;
+
+                listItems.forEach((item, index) => {
+                    if (index >= start && index < end) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
+
+                // Update status tombol pagination
+                document.querySelectorAll('.pagination button').forEach(button => {
+                    button.classList.remove('active');
+                    if (button.dataset.page == pageNumber) {
+                        button.classList.add('active');
+                    }
+                });
+            }
+
+            // Buat tombol pagination
+            for (let i = 1; i <= totalPages; i++) {
+                const button = document.createElement('button');
+                button.textContent = i;
+                button.dataset.page = i;
+                button.addEventListener('click', () => showPage(i));
+                paginationContainer.appendChild(button);
+            }
+
+            // Tampilkan halaman pertama saat load
+            showPage(1);
+        });
+    </script>
+
+    <!-- Footer baru -->
+    <footer class="site-footer">
+        <p>&copy; 2024 Rumah Tahfidz Saijaan</p>
+        <p>Email: <a href="mailto:rumahtahfidzsaijaan@gmail.com">rumahtahfidz@saijaan.com</a></p>
+        <p><a href="index.html">Kembali ke Beranda</a></p>
+    </footer>
+</body>
+</html>
