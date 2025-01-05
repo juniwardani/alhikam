@@ -204,33 +204,79 @@
         /* Style untuk header */
         .site-header {
             text-align: center;
-            padding: 20px 0;
-            background: #800000; /* Maroon tua */
-            margin-bottom: 20px;
-            position: relative; /* Untuk positioning logo */
-            color: #fff; /* Teks putih */
+            padding: 15px 10px;
+            background: #800000;
+            margin-bottom: 15px;
+            position: relative;
+            color: #fff;
         }
 
         .site-header h1 {
             margin: 0;
             padding: 0;
-            font-size: 28px;
+            font-size: 20px;
             border: none;
         }
 
         .site-header p {
-            margin: 5px 0;
-            font-size: 16px;
+            margin: 3px 0;
+            font-size: 14px;
         }
 
         .header-logo {
             position: absolute;
-            left: 20px;
+            left: 10px;
             top: 50%;
             transform: translateY(-50%);
-            width: 60px;
-            height: 60px;
+            width: 40px;
+            height: 40px;
             border-radius: 5px;
+        }
+
+        /* Media query untuk layar sangat kecil */
+        @media (max-width: 360px) {
+            .site-header {
+                padding: 10px 5px;
+            }
+
+            .site-header h1 {
+                font-size: 16px;
+                margin-left: 45px;
+            }
+
+            .site-header p {
+                font-size: 12px;
+                margin-left: 45px;
+            }
+
+            .header-logo {
+                width: 30px;
+                height: 30px;
+                left: 5px;
+            }
+        }
+
+        /* Media query untuk tablet dan desktop */
+        @media (min-width: 768px) {
+            .site-header {
+                padding: 20px 0;
+            }
+
+            .site-header h1 {
+                font-size: 28px;
+                margin-left: 0;
+            }
+
+            .site-header p {
+                font-size: 16px;
+                margin-left: 0;
+            }
+
+            .header-logo {
+                width: 60px;
+                height: 60px;
+                left: 20px;
+            }
         }
 
         /* Style untuk footer */
@@ -304,13 +350,12 @@
     <header class="site-header">
         <img src="img/logo.jpg" alt="Logo Rumah Tahfidz" class="header-logo">
         <h1>Rumah Tahfidz Saijaan</h1>
-        <p>Mengaji dan Menghafal Al Quran</p>
     </header>
     
     <nav>
         <ol class="rectangle-list">
             <li><a href="img/muqodimah.html">Muqadimah</a></li>
-            <li><a href="img/1.html">Al-Hikam 1</a></li>
+            <li><a href="img/img/1.html">Al-Hikam 1</a></li>
             <li><a href="img/2.html">Al-Hikam 2</a></li>
             <li><a href="img/3.html">Al-Hikam 3</a></li>
             <li><a href="img/4.html">Al-Hikam 4</a></li>
