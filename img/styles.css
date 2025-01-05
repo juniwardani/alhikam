@@ -1,0 +1,137 @@
+/* Pengaturan umum */
+body {
+    font-family: 'Amiri', serif;
+    margin: 0;
+    padding: 15px;
+    line-height: 1.6;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.content {
+    text-align: justify;
+  } 
+
+/* Judul utama */
+p[align="center"]:first-of-type {
+    font-size: 24px;
+    font-weight: bold;
+    color: #800000;
+    margin-bottom: 5px;
+}
+
+/* Subjudul */
+p[align="center"]:nth-child(2) {
+    font-size: 20px;
+    color: #A52A2A;
+    margin-top: 0;
+}
+
+/* Teks Arab */
+p[dir="RTL"] {
+    font-family: 'Traditional Arabic', 'Amiri', serif;
+    font-size: 28px;
+    line-height: 1.8;
+    margin: 30px 0;
+}
+
+/* Garis pemisah */
+hr {
+    border: none;
+    height: 2px;
+    background-color: #D8BFD8;
+    margin: 25px 0;
+}
+
+/* Paragraf teks */
+p {
+    text-align: justify;
+    color: #2F1F1F;
+    margin: 15px 0;
+}
+
+/* Penekanan teks */
+em {
+    color: #8B4513;
+    font-style: italic;
+}
+
+/* Teks tebal */
+strong {
+    color: #800000;
+}
+
+/* Hadits */
+p em:only-child {
+    display: block;
+    background-color: #FFF5EE;
+    padding: 15px;
+    border-left: 4px solid #8B0000;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+/* Responsive styles untuk smartphone */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+        font-size: 16px;
+    }
+    
+    p {
+        margin: 12px 0;
+        text-align: justify;
+    }
+    
+    p[dir="RTL"] {
+        font-size: 22px; /* Ukuran font Arab lebih besar agar mudah dibaca */
+    }
+    
+    hr {
+        margin: 15px auto;
+    }
+    
+    /* Mengatur lebar maksimum konten */
+    .container {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    /* Mengatur ukuran font untuk judul */
+    p:nth-child(1),
+    p:nth-child(2),
+    p:nth-child(3) {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+}
+
+/* Untuk layar sangat kecil */
+@media screen and (max-width: 320px) {
+    body {
+        font-size: 14px;
+    }
+    
+    p[dir="RTL"] {
+        font-size: 20px;
+    }
+}
+
+/* Watermark */
+body::before {
+    content: "";
+    background-image: url('logo.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 600px;
+    opacity: 0.15;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+} 
